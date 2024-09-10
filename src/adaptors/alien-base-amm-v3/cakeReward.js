@@ -1,18 +1,16 @@
 const abiMcV3 = require('./masterchef.json');
 
 const utils = require('../utils');
-const sdk = require('@defillama/sdk4');
+const sdk = require('@defillama/sdk5');
 const bn = require('bignumber.js');
 const fetch = require('node-fetch');
-
-const baseUrl = 'https://api.thegraph.com/subgraphs/name';
 
 const chainIds = {
   base: {
     id: 8453,
     mchef: '0x52eaecac2402633d98b95213d0b473e069d86590',
     abi: abiMcV3,
-  }
+  },
 };
 
 const getCakeAprs = async (chain) => {
